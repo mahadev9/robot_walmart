@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.9 on darwin)" generated="2024-02-22T09:42:25.545881" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/mahadevmaitri/Downloads/test/robot_walmart/test.robot">
+<test id="s1-t1" name="Login" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:25.619213" level="INFO">Opening browser 'Chrome' to base url 'https://walmart.wd5.myworkdayjobs.com/en-US/WalmartExternal/userHome'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-22T09:42:25.619024" elapsed="2.745863"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:30.365924" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:28.365261" elapsed="2.000778"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@data-automation-id="email"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-22T09:42:30.366297" elapsed="0.012233"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//input[@data-automation-id="email"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:30.378733" elapsed="0.014324"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:30.393478" level="INFO">Typing text 'mmaitri@udel.edu' into text field '//input[@data-automation-id="email"]'.</msg>
+<arg>//input[@data-automation-id="email"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:30.393271" elapsed="0.106548"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:30.500180" level="INFO">Typing text 'xajxyp-Birxit-9vicve' into text field '//input[@data-automation-id="password"]'.</msg>
+<arg>//input[@data-automation-id="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:30.499998" elapsed="0.049284"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:30.549614" level="INFO">Clicking element '//button[@data-automation-id="signInSubmitButton"]/../.'.</msg>
+<arg>//button[@data-automation-id="signInSubmitButton"]/../.</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:30.549469" elapsed="0.028986"/>
+</kw>
+<status status="PASS" start="2024-02-22T09:42:25.618574" elapsed="4.960072"/>
+</test>
+<test id="s1-t2" name="Click on My Tasks" line="21">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//a[@data-automation-id="taskButton"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-22T09:42:30.579067" elapsed="4.153733"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//a[@data-automation-id="taskButton"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:34.733042" elapsed="0.013583"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:34.746994" level="INFO">Clicking element '//a[@data-automation-id="taskButton"]'.</msg>
+<arg>//a[@data-automation-id="taskButton"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:34.746829" elapsed="0.925464"/>
+</kw>
+<status status="PASS" start="2024-02-22T09:42:30.578828" elapsed="5.093627"/>
+</test>
+<test id="s1-t3" name="Fill Tasks Page" line="26">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//textarea[@data-automation-id="textAreaField"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-22T09:42:35.672768" elapsed="1.303265"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//textarea[@data-automation-id="textAreaField"]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:36.976218" elapsed="0.018419"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.000376" level="INFO">${inputEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_133")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${inputEle}</var>
+<arg>//textarea[@data-automation-id="textAreaField"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:36.994826" elapsed="0.005577"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.000688" level="INFO">Typing text 'Mahadev Mahesh' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_133")&gt;'.</msg>
+<arg>${inputEle}[0]</arg>
+<arg>Mahadev Mahesh</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.000538" elapsed="0.034906"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.035844" level="INFO">Typing text 'Maitri' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_135")&gt;'.</msg>
+<arg>${inputEle}[1]</arg>
+<arg>Maitri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.035642" elapsed="0.030496"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.066488" level="INFO">Typing text 'mmaitri@udel.edu' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_137")&gt;'.</msg>
+<arg>${inputEle}[2]</arg>
+<arg>mmaitri@udel.edu</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.066316" elapsed="0.029920"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.096591" level="INFO">Typing text 'India' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_139")&gt;'.</msg>
+<arg>${inputEle}[3]</arg>
+<arg>India</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.096415" elapsed="0.027557"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.124324" level="INFO">Typing text 'United States of America' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_141")&gt;'.</msg>
+<arg>${inputEle}[4]</arg>
+<arg>United States of America</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.124151" elapsed="0.032706"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.157248" level="INFO">Typing text 'India' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_143")&gt;'.</msg>
+<arg>${inputEle}[5]</arg>
+<arg>India</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.157046" elapsed="0.029654"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.187133" level="INFO">Typing text 'Masters Degree' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_145")&gt;'.</msg>
+<arg>${inputEle}[6]</arg>
+<arg>Masters Degree</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.186968" elapsed="0.031960"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.219341" level="INFO">Typing text 'F1 OPT and F1 STEM OPT' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_147")&gt;'.</msg>
+<arg>${inputEle}[7]</arg>
+<arg>F1 OPT and F1 STEM OPT</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.219141" elapsed="0.037809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.257309" level="INFO">Typing text '0' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_149")&gt;'.</msg>
+<arg>${inputEle}[8]</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.257126" elapsed="0.030224"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.287881" level="INFO">Executing JavaScript:
+window.scrollBy(0,-200)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,-200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.287545" elapsed="0.003017"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.290814" level="INFO">Clicking element '//div[@data-automation-id="checkbox"]/label[text()='F-1']'.</msg>
+<arg>//div[@data-automation-id="checkbox"]/label[text()='F-1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.290695" elapsed="0.025298"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.316426" level="INFO">Executing JavaScript:
+window.scrollBy(0,-500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,-500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.316172" elapsed="0.003869"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.326766" level="INFO">${selectEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_179")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${selectEle}</var>
+<arg>//div[@data-automation-id="selectShowAll"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.320212" elapsed="0.006588"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:37.327198" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_179")&gt;'.</msg>
+<arg>${selectEle}[0]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.326988" elapsed="0.024846"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:38.352556" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:37.352046" elapsed="1.000640"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:38.363134" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:38.352948" elapsed="0.010228"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[2]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:38.363382" elapsed="0.007775"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:38.371549" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_193")&gt;'.</msg>
+<arg>${menuEle}[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:38.371345" elapsed="0.024018"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:39.398077" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:38.395545" elapsed="1.002676"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:39.398790" level="INFO">Typing text 'Electronics and Communication Engineering, Bachelor 
+Computer Science, Master' into text field '//label[contains(text(),'If Yes, what was your field of study?')]/../..//textarea'.</msg>
+<arg>//label[contains(text(),'If Yes, what was your field of study?')]/../..//textarea</arg>
+<arg>Electronics and Communication Engineering, Bachelor \nComputer Science, Master</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:39.398520" elapsed="0.068382"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:39.467092" elapsed="0.266508"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:39.733964" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_180")&gt;'.</msg>
+<arg>${selectEle}[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:39.733790" elapsed="0.018205"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:40.754822" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:39.752185" elapsed="1.002781"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:40.766830" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:40.755276" elapsed="0.011619"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:40.767215" elapsed="0.011869"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:40.779698" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_254")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:40.779408" elapsed="0.026979"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[2]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:40.806590" elapsed="0.262576"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:41.069583" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_181")&gt;'.</msg>
+<arg>${selectEle}[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:41.069380" elapsed="0.020300"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:42.091809" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:41.089871" elapsed="1.002139"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:42.102686" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.092341" elapsed="0.010402"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[2]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.103032" elapsed="0.010285"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:42.113795" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_256")&gt;'.</msg>
+<arg>${menuEle}[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.113553" elapsed="0.024426"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.138196" elapsed="0.264537"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:42.403263" level="INFO">Executing JavaScript:
+window.scrollBy(0,400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.402998" elapsed="0.003200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:42.406512" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_182")&gt;'.</msg>
+<arg>${selectEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.406350" elapsed="0.020134"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:43.428723" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:42.426654" elapsed="1.002156"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:43.433986" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:43.428987" elapsed="0.005027"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:43.434149" elapsed="0.006235"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:43.440703" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_267")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:43.440545" elapsed="0.018465"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[4]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:43.459189" elapsed="0.264937"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:43.724560" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_183")&gt;'.</msg>
+<arg>${selectEle}[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:43.724345" elapsed="0.022018"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:44.747253" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:43.746547" elapsed="1.000933"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:44.759133" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:44.747909" elapsed="0.011310"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:44.759547" elapsed="0.009095"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:44.769095" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_270")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:44.768873" elapsed="0.022601"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[5]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:44.791673" elapsed="0.266161"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:45.059660" level="INFO">Executing JavaScript:
+window.scrollBy(0,400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:45.058838" elapsed="0.006978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:45.066461" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_184")&gt;'.</msg>
+<arg>${selectEle}[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:45.066112" elapsed="0.031360"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:46.098526" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:45.097689" elapsed="1.001404"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:46.114909" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:46.100768" elapsed="0.014209"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:46.115320" elapsed="0.012936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:46.128939" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_275")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:46.128548" elapsed="0.023135"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[6]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:46.151893" elapsed="0.265383"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:46.419243" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_185")&gt;'.</msg>
+<arg>${selectEle}[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:46.418435" elapsed="0.033629"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:47.453164" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:46.452293" elapsed="1.001453"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:47.471138" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.455064" elapsed="0.016151"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.471608" elapsed="0.011429"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:47.483724" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_278")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.483390" elapsed="0.022235"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[7]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.505828" elapsed="0.268692"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:47.775057" level="INFO">Executing JavaScript:
+window.scrollBy(0,400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.774759" elapsed="0.006225"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:47.781341" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_186")&gt;'.</msg>
+<arg>${selectEle}[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.781147" elapsed="0.022117"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:48.804321" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:47.803475" elapsed="1.000988"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:48.813228" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:48.804781" elapsed="0.008489"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:48.813480" elapsed="0.009063"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:48.822973" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_301")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:48.822753" elapsed="0.020723"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[8]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:48.843679" elapsed="0.272361"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:49.117220" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_187")&gt;'.</msg>
+<arg>${selectEle}[8]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:49.116652" elapsed="0.036012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:50.153293" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:49.152898" elapsed="1.000508"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:50.159279" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.153721" elapsed="0.005594"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.159539" elapsed="0.007912"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:50.167883" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_304")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.167673" elapsed="0.023329"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${selectEle}[9]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.191223" elapsed="0.265394"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:50.458856" level="INFO">Executing JavaScript:
+window.scrollBy(0,400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.457948" elapsed="0.006179"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:50.464814" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_188")&gt;'.</msg>
+<arg>${selectEle}[9]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.464441" elapsed="0.031264"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:51.498751" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:50.495923" elapsed="1.003366"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.512846" level="INFO">${menuEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_191")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${menuEle}</var>
+<arg>//div[@data-automation-id="promptOption"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.500220" elapsed="0.012697"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${menuEle}[3]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.513246" elapsed="0.011063"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.524816" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_309")&gt;'.</msg>
+<arg>${menuEle}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.524569" elapsed="0.022256"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.555290" level="INFO">${dayEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_163")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${dayEle}</var>
+<arg>//input[@data-automation-id="dateSectionDay-input"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.547043" elapsed="0.008287"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.562343" level="INFO">${monthEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_162")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${monthEle}</var>
+<arg>//input[@data-automation-id="dateSectionMonth-input"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.555515" elapsed="0.006860"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.569166" level="INFO">${yearEle} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_164")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<var>${yearEle}</var>
+<arg>//input[@data-automation-id="dateSectionYear-input"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.562572" elapsed="0.006625"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${dayEle}[0]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.569363" elapsed="0.262407"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.832231" level="INFO">Executing JavaScript:
+window.scrollBy(0,-400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,-400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.831977" elapsed="0.003253"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.835530" level="INFO">Typing text '07' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_162")&gt;'.</msg>
+<arg>${monthEle}[0]</arg>
+<arg>07</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.835365" elapsed="0.041669"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.877396" level="INFO">Typing text '20' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_163")&gt;'.</msg>
+<arg>${dayEle}[0]</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.877209" elapsed="0.032438"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:51.910020" level="INFO">Typing text '2027' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_164")&gt;'.</msg>
+<arg>${yearEle}[0]</arg>
+<arg>2027</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.909837" elapsed="0.027443"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${dayEle}[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-22T09:42:51.937482" elapsed="0.267178"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:52.206053" level="INFO">Executing JavaScript:
+window.scrollBy(0,400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-22T09:42:52.205321" elapsed="0.006423"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:52.212380" level="INFO">Typing text '07' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_295")&gt;'.</msg>
+<arg>${monthEle}[1]</arg>
+<arg>07</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:52.212047" elapsed="0.053458"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:52.266883" level="INFO">Typing text '13' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_296")&gt;'.</msg>
+<arg>${dayEle}[1]</arg>
+<arg>13</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:52.266699" elapsed="0.026190"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:52.293344" level="INFO">Typing text '2022' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="11c83c8520674ab1be12c788601237a1", element="9BA1C1DAE227560925ECCC8706B00374_element_297")&gt;'.</msg>
+<arg>${yearEle}[1]</arg>
+<arg>2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:52.293140" elapsed="0.031088"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:53.326695" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:52.324400" elapsed="1.002534"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T09:42:53.327811" level="INFO">Clicking element '//button[@data-automation-id="wd-CommandButton_uic_okButton"]'.</msg>
+<arg>//button[@data-automation-id="wd-CommandButton_uic_okButton"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T09:42:53.327408" elapsed="0.041999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-22T09:42:58.370874" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-22T09:42:53.369622" elapsed="5.001655"/>
+</kw>
+<status status="PASS" start="2024-02-22T09:42:35.672587" elapsed="22.699491"/>
+</test>
+<status status="PASS" start="2024-02-22T09:42:25.546860" elapsed="32.826314"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
